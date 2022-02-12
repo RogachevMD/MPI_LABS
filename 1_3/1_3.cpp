@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 	root = size / 2;
 
 	int fromTgt = ((rank == 0 ? size : rank)) - 1;
-	int toTgt = (rank == size - 1) ? 0 : rank + 1;
+	int toTgt = (rank == (size - 1)) ? 0 : (rank + 1);
 
 	int bufferSize = 10;
 	int msgTag = 10;
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		MPI_Recv((&msg), bufferSize, MPI_INT, fromTgt, msgTag,
+		MPI_Recv(&msg, bufferSize, MPI_INT, fromTgt, msgTag,
 			MPI_COMM_WORLD, MPI_STATUSES_IGNORE);
 
 		printf("msg from %3d to %3d: %d", fromTgt, rank, msg);
@@ -45,7 +45,6 @@ int main(int argc, char* argv[])
 		MPI_Send(&msg, bufferSize, MPI_INT, toTgt, msgTag,
 			MPI_COMM_WORLD);
 	}
-
 
 	MPI_Finalize();
 	return 0;

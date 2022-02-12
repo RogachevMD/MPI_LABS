@@ -20,7 +20,17 @@
       "ProjectGuid": "ebf027f0-e78c-4701-becb-7fe6d7f524e6",
       "DisplayName": "1_3",
       "ColorIndex": 3
+    },
+    "1e2ca142-7de9-4d17-97ac-3b438c0dbf39": {
+      "ProjectGuid": "1e2ca142-7de9-4d17-97ac-3b438c0dbf39",
+      "DisplayName": "2_1",
+      "ColorIndex": 4
+    },
+    "ba215013-b261-49c1-bf3a-696267ab4821": {
+      "ProjectGuid": "ba215013-b261-49c1-bf3a-696267ab4821",
+      "DisplayName": "2_2",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }
